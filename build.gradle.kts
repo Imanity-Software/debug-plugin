@@ -77,6 +77,7 @@ repositories {
     mavenCentral()
     maven(url = uri("https://oss.sonatype.org/content/repositories/snapshots/"))
     maven(url = uri("https://repo.codemc.io/repository/maven-public/"))
+    maven(url = uri("https://repo.codemc.io/repository/nms/"))
     // Spigot's repository for spigot api dependency
     maven(url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/"))
     maven(url = uri("https://repo.imanity.dev/imanity-libraries"))
@@ -86,6 +87,8 @@ repositories {
 dependencies {
     // Spigot dependency
     compileOnly("org.spigotmc:spigot-api:${properties("spigot.version")}-R0.1-SNAPSHOT")
+
+    compileOnly("org.spigotmc:spigot:1.8.8-R0.1-SNAPSHOT")
 }
 
 tasks.withType(ShadowJar::class.java) {
